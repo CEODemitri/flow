@@ -1,0 +1,124 @@
+<div class="min-h-screen flex flex-col">
+        <!-- Nav menu -->
+        <nav class="bg-neutral-800 shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Website Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-gray-500 text-lg">Logo</span>
+                        </a>
+                    </div>
+                    <!-- Primary Navbar items -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="#" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold">Home</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Services</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+                        <a href="#" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                    </div>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3 ">
+                    <a href="#" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
+                    <a href="#" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-green-500"
+                            x-show="!showMenu"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Services</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">About</a></li>
+                <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
+
+        <!-- Drawer -->
+        <div id="drawer" class="fixed inset-y-0 right-0 max-w-xs w-full bg-white shadow-xl z-50 transform translate-x-full transition-transform duration-300 ease-in-out">
+            <div class="h-full flex flex-col py-6 bg-white shadow-xl">
+                <div class="px-4 sm:px-6">
+                    <div class="flex items-start justify-between">
+                        <h2 class="text-lg font-medium text-gray-900">Menu</h2>
+                        <button id="closeDrawer" class="ml-3 h-7 flex items-center">
+                            <span class="sr-only">Close drawer</span>
+                            <svg class="h-6 w-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-6 relative flex-1 px-4 sm:px-6">
+                    <div class="absolute inset-0 px-4 sm:px-6">
+                        <div class="h-full flex flex-col py-6 space-y-6">
+                            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                                Dashboard
+                            </a>
+                            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                                Calendar
+                            </a>
+                            <a href="#" class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-base font-medium rounded-md">
+                                Analytics
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <main class="flex-1 overflow-auto p-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-2xl font-semibold text-gray-300 mb-4">Study Tracker Board</h2>
+                
+                <!-- Kanban board -->
+                <div class="flex flex-col md:flex-row gap-4">
+                    <!-- To Do Column -->
+                    <div class="flex-1 bg-gray-700 p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-300 mb-2">To Do</h3>
+                        <div id="todoList" class="space-y-2">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                        <div class="mt-4">
+                            <input type="text" id="newTodoTask" class="w-full p-2 border rounded" placeholder="Add a new task">
+                            <button id="addTodoTask" class="mt-2 w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition duration-300">Add Task</button>
+                        </div>
+                    </div>
+
+                    <!-- In Progress Column -->
+                    <div class="flex-1 bg-gray-700 p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-300 mb-2">In Progress</h3>
+                        <div id="inProgressList" class="space-y-2">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Completed Column -->
+                    <div class="flex-1 bg-gray-700 p-4 rounded-lg shadow">
+                        <h3 class="text-lg font-semibold text-gray-300 mb-2">Completed</h3>
+                        <div id="completedList" class="space-y-2">
+                            <!-- Tasks will be added here dynamically -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
