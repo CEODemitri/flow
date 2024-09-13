@@ -24,3 +24,7 @@ Things you may want to cover:
 - ...
 
 <!-- bin/rails generate model Task title:string description:string complete:boolean -->
+
+## 9 13 24
+
+Working hard.
