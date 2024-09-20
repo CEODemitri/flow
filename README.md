@@ -28,3 +28,6 @@ Things you may want to cover:
 ## 9 13 24
 
 Working hard.
+
+9 20
+Added Hot reloading to application from example by Aldo Pportillo https://dev.to/aldoportillo/live-reloading-in-rails-5g57
