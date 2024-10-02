@@ -125,6 +125,14 @@
                     <h3 class="text-lg font-semibold text-gray-300 mb-4">All Tasks</h3>
                     <div id="allTasksList" class="space-y-2">
                         <!-- Tasks will be added here dynamically -->
+                        <h1>Tasks</h1>
+                        <ul>
+                            <% @tasks.each do |task| %>
+                                <li class="text-white text-2xl border">
+                                    <%= task.Title %>
+                                </li>
+                            <% end %>
+                        </ul>
                     </div>
                 </div>
             </div>

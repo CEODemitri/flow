@@ -31,3 +31,10 @@ Working hard.
 
 9 20
 Added Hot reloading to application from example by Aldo Pportillo https://dev.to/aldoportillo/live-reloading-in-rails-5g57
+
+10 01
+Generate Task Model Title:string description:text complete:boolean
+Migrated to DB
+Used console to create a Task model task = Task.new(Title: "...)
+Fetched all tasks from db in controller
+acces he instance variable by the view
